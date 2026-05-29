@@ -15,7 +15,7 @@ jobs:
       - name: Generate Sitemap
         uses: cicirello/generate-sitemap@v1
         with:
-          base-url: https://aakashkumarthakur.github.io/sujata/
+          base-url: https://hotelsujatapalace.com.np/
 
       - name: Commit and push if changed
         run: |
