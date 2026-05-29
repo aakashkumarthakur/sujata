@@ -1,0 +1,31 @@
+{
+  "name": "sujata-hotel-palace",
+  "version": "1.0.0",
+  "description": "Sujata Hotel Palace - Luxury hotel website in Malangwa, Sarlahi, Nepal",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx serve .",
+    "build": "echo 'Static site - no build needed'",
+    "lint": "echo 'No linter configured'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aakashkumarthakur/sujata.git"
+  },
+  "keywords": [
+    "hotel",
+    "hospitality",
+    "nepal",
+    "malangwa",
+    "sujata-hotel-palace"
+  ],
+  "author": "Aakash Kumar Thakur",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aakashkumarthakur/sujata/issues"
+  },
+  "homepage": "https://github.com/aakashkumarthakur/sujata#readme",
+  "dependencies": {
+    "@vercel/speed-insights": "^2.0.0"
+  }
+}
