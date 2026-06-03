@@ -296,7 +296,7 @@
       position: absolute; inset: 0; z-index: 0;
       background:
         linear-gradient(135deg, rgba(26,10,13,0.92) 0%, rgba(123,13,30,0.7) 50%, rgba(26,10,13,0.85) 100%),
-        url('shp.png') center/cover no-repeat;
+        url('shp.webp') center/cover no-repeat;
       animation: scaleIn 1.5s ease both;
     }
     .hero-bg::after {
