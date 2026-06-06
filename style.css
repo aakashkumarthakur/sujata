@@ -857,3 +857,313 @@
       transition: opacity 0.7s ease, transform 0.7s ease;
     }
     .reveal.visible { opacity: 1; transform: translateY(0); }
+
+
+ /* ═══════════════════════════════════════════════
+   BANQUET PAGE STYLES
+   PASTE THIS at the very END of your style.css file
+═══════════════════════════════════════════════ */
+
+/* ─── Banquet Intro ─── */
+.banquet-intro {
+  padding: 60px 0 20px;
+  background: var(--cream);
+}
+
+/* ─── Banquet Card Section ─── */
+.banquet-section {
+  padding: 48px 0;
+  background: var(--white);
+}
+
+.banquet-section--alt {
+  background: var(--cream);
+}
+
+.banquet-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.banquet-card--reverse {
+  direction: rtl;
+}
+
+.banquet-card--reverse > * {
+  direction: ltr;
+}
+
+/* ─── Image ─── */
+.banquet-image-wrap {
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.banquet-image {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.banquet-image-wrap:hover .banquet-image {
+  transform: scale(1.04);
+}
+
+/* Badge on image */
+.banquet-badge {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: var(--crimson);
+  color: var(--gold);
+  font-family: var(--font-serif);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  padding: 6px 16px;
+  border: 1px solid rgba(201,168,76,0.4);
+}
+
+.banquet-badge--gold {
+  background: var(--gold);
+  color: var(--dark);
+}
+
+/* Gold corner accent on image wrap */
+.banquet-image-wrap::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 60px;
+  height: 60px;
+  border-bottom: 3px solid var(--gold);
+  border-right: 3px solid var(--gold);
+  pointer-events: none;
+}
+
+/* ─── Banquet Info Text ─── */
+.banquet-type {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 12px;
+}
+
+.banquet-name {
+  font-family: var(--font-serif);
+  font-size: clamp(24px, 3vw, 34px);
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 20px;
+  line-height: 1.25;
+}
+
+.banquet-desc {
+  font-size: 15px;
+  color: var(--gray);
+  line-height: 1.85;
+}
+
+.banquet-desc strong {
+  color: var(--crimson);
+  font-weight: 600;
+}
+
+/* ─── Feature Pills ─── */
+.banquet-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 24px 0 28px;
+}
+
+.banquet-feat-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--cream);
+  border: 1px solid rgba(123,13,30,0.15);
+  border-radius: 2px;
+  padding: 7px 14px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: var(--dark);
+  transition: background var(--transition), border-color var(--transition);
+}
+
+.banquet-feat-pill svg {
+  width: 14px;
+  height: 14px;
+  fill: var(--crimson);
+  flex-shrink: 0;
+}
+
+.banquet-feat-pill:hover {
+  background: rgba(123,13,30,0.06);
+  border-color: var(--crimson);
+}
+
+/* ─── Events We Host Grid ─── */
+.banquet-events-section {
+  padding: 80px 24px;
+  background: var(--dark);
+}
+
+.banquet-events-section .section-title {
+  color: var(--white);
+}
+
+.banquet-events-section .section-subtitle {
+  color: rgba(255,255,255,0.6);
+}
+
+.banquet-events-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+  max-width: 1100px;
+  margin: 48px auto 0;
+  padding: 0 24px;
+}
+
+.banquet-event-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(201,168,76,0.18);
+  padding: 36px 24px;
+  text-align: center;
+  transition: background var(--transition), border-color var(--transition), transform var(--transition);
+}
+
+.banquet-event-card:hover {
+  background: rgba(201,168,76,0.07);
+  border-color: var(--gold);
+  transform: translateY(-4px);
+}
+
+.banquet-event-icon {
+  width: 56px;
+  height: 56px;
+  background: rgba(201,168,76,0.12);
+  border: 1px solid rgba(201,168,76,0.3);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  transition: background var(--transition);
+}
+
+.banquet-event-card:hover .banquet-event-icon {
+  background: rgba(201,168,76,0.22);
+}
+
+.banquet-event-icon svg {
+  width: 26px;
+  height: 26px;
+  fill: var(--gold);
+}
+
+.banquet-event-card h4 {
+  font-family: var(--font-serif);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 12px;
+}
+
+.banquet-event-card p {
+  font-size: 13.5px;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.8;
+}
+
+/* ─── CTA Banner ─── */
+.banquet-cta-banner {
+  background: var(--crimson);
+  background-image: linear-gradient(135deg, var(--crimson-dk) 0%, var(--crimson) 60%, var(--crimson-lt) 100%);
+  padding: 80px 24px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.banquet-cta-banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url("hhhp.png");
+  pointer-events: none;
+}
+
+.banquet-cta-content {
+  position: relative;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.banquet-cta-content h2 {
+  font-family: var(--font-serif);
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.banquet-cta-content h2 span {
+  color: var(--gold);
+}
+
+.banquet-cta-content p {
+  font-size: 16px;
+  color: rgba(255,255,255,0.82);
+  line-height: 1.8;
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 900px) {
+  .banquet-card,
+  .banquet-card--reverse {
+    grid-template-columns: 1fr;
+    direction: ltr;
+    gap: 32px;
+  }
+
+  .banquet-image {
+    height: 280px;
+  }
+
+  .banquet-events-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 540px) {
+  .banquet-events-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .banquet-features {
+    gap: 8px;
+  }
+
+  .banquet-feat-pill {
+    font-size: 11px;
+    padding: 6px 10px;
+  }
+}
