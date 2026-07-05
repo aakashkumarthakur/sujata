@@ -130,7 +130,7 @@
       font-family: var(--font-serif); font-size: 28px; font-weight: 800;
       color: var(--gold); line-height: 1; position: relative; z-index: 1;
     }
-    .logo-text { display: flex; flex-direction: column; line-height: 1.1; }
+    .logo-text { display: flex; flex-direction: column; line-height: 1.1; align-items: center; }
     .logo-name {
       font-family: var(--font-serif); font-size: 18px; font-weight: 700;
       color: var(--gold);
@@ -1166,4 +1166,211 @@
     font-size: 11px;
     padding: 6px 10px;
   }
+}
+/* ════════════════════════════════════
+   FOOD GALLERY / SWIPEABLE CAROUSEL (Restro Page)
+════════════════════════════════════ */
+.food-gallery-section {
+  padding: 70px 24px 90px;
+  background: var(--cream);
+}
+
+.food-carousel {
+  max-width: 480px;
+  margin: 40px auto 0;
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 12px 32px rgba(26,10,13,0.18);
+  background: #fff;
+  border: 2px solid var(--gold);
+}
+
+.food-carousel-track {
+  display: flex;
+  touch-action: pan-y;
+  cursor: grab;
+  transition: transform 0.4s ease;
+  user-select: none;
+}
+
+.food-carousel-track.dragging {
+  transition: none;
+  cursor: grabbing;
+}
+
+.food-slide {
+  flex: 0 0 100%;
+  min-width: 100%;
+}
+
+.food-slide img {
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+  display: block;
+  pointer-events: none;
+}
+
+.food-carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(26,10,13,0.55);
+  color: var(--gold-lt);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.25s ease;
+  z-index: 2;
+}
+
+.food-carousel-arrow:hover {
+  background: var(--crimson);
+}
+
+.food-carousel-arrow svg {
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
+}
+
+.food-carousel-arrow.prev { left: 12px; }
+.food-carousel-arrow.next { right: 12px; }
+
+.food-carousel-dots {
+  position: absolute;
+  bottom: 14px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  z-index: 2;
+}
+
+.food-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255,255,255,0.6);
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.food-dot.active {
+  background: var(--gold);
+  transform: scale(1.25);
+}
+
+@media (max-width: 480px) {
+  .food-carousel { max-width: 92%; }
+  .food-slide img { height: 260px; }
+}
+
+/* ════════════════════════════════════
+   HOTEL GALLERY / SWIPEABLE CAROUSEL
+════════════════════════════════════ */
+.hotel-gallery-section {
+  padding: 70px 24px 90px;
+  background: var(--cream);
+}
+
+.hotel-carousel {
+  max-width: 480px;
+  margin: 40px auto 0;
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 12px 32px rgba(26,10,13,0.18);
+  background: #fff;
+  border: 2px solid var(--gold);
+}
+
+.hotel-carousel-track {
+  display: flex;
+  touch-action: pan-y;
+  cursor: grab;
+  transition: transform 0.4s ease;
+  user-select: none;
+}
+
+.hotel-carousel-track.dragging {
+  transition: none;
+  cursor: grabbing;
+}
+
+.hotel-slide {
+  flex: 0 0 100%;
+  min-width: 100%;
+}
+
+.hotel-slide img {
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+  display: block;
+  pointer-events: none;
+}
+
+.hotel-carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(26,10,13,0.55);
+  color: var(--gold-lt);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.25s ease;
+  z-index: 2;
+}
+
+.hotel-carousel-arrow:hover { background: var(--crimson); }
+.hotel-carousel-arrow svg { width: 22px; height: 22px; fill: currentColor; }
+.hotel-carousel-arrow.prev { left: 12px; }
+.hotel-carousel-arrow.next { right: 12px; }
+
+.hotel-carousel-dots {
+  position: absolute;
+  bottom: 14px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  z-index: 2;
+}
+
+.hotel-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255,255,255,0.6);
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.hotel-dot.active {
+  background: var(--gold);
+  transform: scale(1.25);
+}
+
+@media (max-width: 480px) {
+  .hotel-carousel { max-width: 92%; }
+  .hotel-slide img { height: 260px; }
 }
